@@ -1,66 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadastro de Alunos</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="page">
-    <section class="container">
-      <header class="hero">
-        <p class="eyebrow">Portal Acadêmico</p>
-        <h1>Cadastro de Alunos</h1>
-        <p class="subtitle">Preencha os dados para criar o acesso do aluno.</p>
-      </header>
+    <div class="container">
+        <h1>📝 Cadastro de Aluno</h1>
 
-      <form id="formAluno" novalidate>
-        <div class="input-group">
-          <label for="nome_completo">Nome Completo</label>
-          <input type="text" id="nome_completo" required maxlength="100" autocomplete="name" placeholder="Ex.: Maria da Silva" />
-          <small class="hint" id="hint_nome">Use nome e sobrenome.</small>
-        </div>
+        <form id="formAluno">
+            <div class="form-group">
+                <label for="nome_completo">Nome Completo</label>
+                <input type="text" id="nome_completo" required>
+            </div>
 
-        <div class="input-group">
-          <label for="usuario_acesso">Usuário de Acesso</label>
-          <input type="text" id="usuario_acesso" required maxlength="50" autocomplete="username" placeholder="Ex.: maria.silva" />
-          <small class="hint" id="hint_usuario">Sem espaços. Use letras, números, ponto e underscore.</small>
-        </div>
+            <div class="form-group">
+                <label for="usuario_acesso">Usuário de Acesso</label>
+                <input type="text" id="usuario_acesso" required>
+            </div>
 
-        <div class="input-group">
-          <label for="senha">Senha</label>
-          <input type="password" id="senha" required minlength="6" autocomplete="new-password" placeholder="Mínimo 6 caracteres" />
-          <div class="password-meter" aria-hidden="true">
-            <div id="passwordBar"></div>
-          </div>
-          <small class="hint" id="hint_senha">Use maiúsculas, minúsculas, números e símbolo.</small>
-        </div>
+            <div class="form-group">
+                <label for="senha_hash">Senha</label>
+                <input type="password" id="senha_hash" required>
+            </div>
 
-        <div class="input-group">
-          <label for="email_aluno">E-mail</label>
-          <input type="email" id="email_aluno" required maxlength="100" autocomplete="email" placeholder="exemplo@dominio.com" />
-          <small class="hint" id="hint_email">Informe um e-mail válido.</small>
-        </div>
+            <div class="form-group">
+                <label for="email_aluno">E-mail</label>
+                <input type="email" id="email_aluno" required>
+            </div>
 
-        <div class="input-group">
-          <div class="label-row">
-            <label for="observacao">Observação</label>
-            <span id="obsCounter">0/255</span>
-          </div>
-          <textarea id="observacao" maxlength="255" placeholder="Informações adicionais (opcional)"></textarea>
-          <small class="hint" id="hint_observacao">Evite dados sensíveis aqui.</small>
-        </div>
+            <div class="form-group">
+                <label for="observacao">Observação</label>
+                <textarea id="observacao" rows="3"></textarea>
+            </div>
 
-        <button type="submit" class="btn" id="submitBtn">
-          <span id="btnText">Cadastrar</span>
-        </button>
-      </form>
+            <button type="submit">Cadastrar Aluno</button>
+            <div id="mensagem" class="mensagem"></div>
+        </form>
+    </div>
 
-      <p id="mensagem" role="status" aria-live="polite"></p>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
