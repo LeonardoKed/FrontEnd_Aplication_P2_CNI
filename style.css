@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #f2f4f8;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,80 +14,91 @@ body {
     padding: 20px;
 }
 
+/* CARD */
 .container {
-    background: #fff;
-    border-radius: 20px;
+    background: #ffffff;
+    border-radius: 12px;
     padding: 40px;
-    max-width: 600px;
+    max-width: 550px;
     width: 100%;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    border: 1px solid #e5e5e5;
 }
 
+/* TÍTULO */
 h1 {
-    color: #333;
-    margin-bottom: 30px;
+    color: #222;
+    margin-bottom: 25px;
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
+    font-weight: 600;
 }
 
+/* CAMPOS */
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    color: #555;
+    margin-bottom: 6px;
+    color: #444;
     font-weight: 500;
 }
 
 input, textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.3s;
+    border: 1px solid #cfd3d8;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fafafa;
+    transition: all 0.2s ease;
 }
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #4a90e2;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(74,144,226,0.4);
 }
 
+/* BOTÃO */
 button {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #4a90e2;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
 button:hover {
+    background: #3b7ac4;
     transform: translateY(-2px);
 }
 
+/* MENSAGENS */
 .mensagem {
     margin-top: 20px;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     text-align: center;
     font-weight: 500;
 }
 
 .sucesso {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background: #d1f2e5;
+    color: #1b6b4a;
+    border: 1px solid #a6e4c9;
 }
 
 .erro {
     background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
+    color: #842029;
+    border: 1px solid #f5c2c7;
 }
