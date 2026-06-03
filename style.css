@@ -1,104 +1,112 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* FUNDO */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f2f4f8;
+    background: radial-gradient(circle at top, #0f0f0f, #000);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    color: #e0e0e0;
 }
 
-/* CARD */
+/* CARD FUTURISTA */
 .container {
-    background: #ffffff;
-    border-radius: 12px;
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 18px;
     padding: 40px;
-    max-width: 550px;
+    max-width: 600px;
     width: 100%;
-    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
-    border: 1px solid #e5e5e5;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
 }
 
 /* TÍTULO */
 h1 {
-    color: #222;
-    margin-bottom: 25px;
     text-align: center;
-    font-size: 26px;
-    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
 }
 
 /* CAMPOS */
 .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
     margin-bottom: 6px;
-    color: #444;
+    color: #b8faff;
     font-weight: 500;
 }
 
+/* INPUTS NEON */
 input, textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #cfd3d8;
-    border-radius: 6px;
-    font-size: 15px;
-    background: #fafafa;
-    transition: all 0.2s ease;
+    background: #0d0d0d;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #e0e0e0;
+    transition: 0.3s;
 }
 
 input:focus, textarea:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 10px #00eaff;
     outline: none;
-    border-color: #4a90e2;
-    background: #fff;
-    box-shadow: 0 0 4px rgba(74,144,226,0.4);
 }
 
-/* BOTÃO */
+/* BOTÃO NEON */
 button {
     width: 100%;
     padding: 14px;
-    background: #4a90e2;
-    color: #fff;
+    background: #00eaff;
+    color: #000;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 17px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: 0.25s;
+    box-shadow: 0 0 12px #00eaff;
 }
 
 button:hover {
-    background: #3b7ac4;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #00eaff;
 }
 
 /* MENSAGENS */
 .mensagem {
     margin-top: 20px;
     padding: 12px;
-    border-radius: 6px;
+    border-radius: 8px;
     text-align: center;
     font-weight: 500;
 }
 
 .sucesso {
-    background: #d1f2e5;
-    color: #1b6b4a;
-    border: 1px solid #a6e4c9;
+    background: rgba(0, 255, 150, 0.15);
+    color: #00ff9d;
+    border: 1px solid #00ff9d;
+    box-shadow: 0 0 10px #00ff9d;
 }
 
 .erro {
-    background: #f8d7da;
-    color: #842029;
-    border: 1px solid #f5c2c7;
+    background: rgba(255, 0, 80, 0.15);
+    color: #ff4d6d;
+    border: 1px solid #ff4d6d;
+    box-shadow: 0 0 10px #ff4d6d;
 }
